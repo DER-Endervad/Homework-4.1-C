@@ -15,6 +15,7 @@ int main()
         for (int i = 0; i < size; i++) {
             arr[i].full(file);
         }
+        file.close();
         std::ofstream out("out.txt", std::ios::out);
         if (out.is_open()) {
             out << size; out << "\n";
@@ -22,5 +23,6 @@ int main()
                 arr[i].get_output_address(out);
             }
         }
+        out.close();
     }
 }
